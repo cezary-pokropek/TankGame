@@ -20,4 +20,7 @@ class TANKGAME_API ATankAIController : public AAIController
 
 	virtual void Tick(float DeltaSeconds) override;
 
+	//How close can AI get to the Player
+	float AcceptanceRadius = 3000;
+
 };
