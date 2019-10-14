@@ -6,8 +6,6 @@
 #include "AIController.h"
 #include "TankAIController.generated.h"
 
-class ATank;
-
 /**
  * 
  */
@@ -20,7 +18,10 @@ class TANKGAME_API ATankAIController : public AAIController
 
 	virtual void Tick(float DeltaSeconds) override;
 
+protected: 
+
 	//How close can AI get to the Player
-	float AcceptanceRadius = 3000;
+	UPROPERTY(EditDefaultsOnly , Category = "Setup")
+	float AcceptanceRadius = 8000;
 
 };
